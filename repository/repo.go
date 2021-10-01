@@ -18,7 +18,6 @@ func Load() error {
 	if err != nil {
 		return err
 	}
-	fmt.Println([]byte(file))
 	errr := json.Unmarshal([]byte(file), &acc)
 	if errr != nil {
 		return errr
