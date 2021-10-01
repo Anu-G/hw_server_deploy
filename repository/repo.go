@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"os"
 )
 
 type AccountDetail struct {
@@ -15,7 +14,7 @@ type AccountDetail struct {
 
 func Load() error {
 	acc := AccountDetail{}
-	file, err := ioutil.ReadFile((os.Getenv("FILE_JSON")))
+	file, err := ioutil.ReadFile("./hw.json")
 	if err != nil {
 		return err
 	}
