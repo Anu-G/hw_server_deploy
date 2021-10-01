@@ -7,11 +7,6 @@ import (
 )
 
 func Home(c *fiber.Ctx) error {
-	err := repository.Load()
-	if err != nil {
-		return err
-	}
-
 	res := struct {
 		Status  int    `json:"Status"`
 		Message string `jsons:"message"`
