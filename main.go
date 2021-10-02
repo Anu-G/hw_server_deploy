@@ -13,7 +13,8 @@ import (
 
 func main() {
 	app := SetupFiber()
-	err := app.Listen(os.Getenv("PORT"))
+	port := os.Getenv("PORT")
+	err := app.Listen(":" + port)
 	if err != nil {
 		log.Fatal("error in listening port", err)
 	}
